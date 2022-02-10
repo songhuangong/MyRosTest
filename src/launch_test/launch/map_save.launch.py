@@ -1,7 +1,13 @@
 
 #!/usr/bin/env python3
 
-# This is the launch file used for ROS Foxy and older. Launch this file to save a map created in RViz.
+# This is the launch file used for ROS Foxy and older. 
+# Launch this file to save a map created in RViz.
+# 建图完成后，还需输入命令：
+# ros2 service call /map_saver/save_map nav2_msgs/srv/SaveMap "{map_topic: map, map_url: my_map, image_format: pgm, map_mode: trinary, free_thresh: 0.25, occupied_thresh: 0.65}"
+
+
+
 import os
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
